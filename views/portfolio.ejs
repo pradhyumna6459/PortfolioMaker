@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= ans.headingname %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<style>
+  /* nav */
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 10%;
+   
+    
+}
+.nav-item{
+    padding: 5px 10px;
+}
+.navbar-nav{
+    padding-right: 5%;
+}
+.navbar{
+    padding: 0;
+}
+
+/* html tag */
+h2{
+    text-align: center;
+}
+
+p{
+    line-height: 2;
+    font-size: 1.2rem;
+}
+body{
+    padding: 0;
+}
+hr{
+    border-top: 3px dotted;
+    color: darkgray;
+}
+span:hover{
+    color: blue;
+}
+.profile-picture{
+    width: 250px;
+    height: 250px;
+    margin-right: 12px;
+    margin-bottom: 5px;
+
+}
+.profile{
+    margin-top: 5%;
+    margin-left: 8%;
+}
+
+.profile-col{
+    text-align: center;
+    padding: 0px 10px 20px;
+}
+.icon-image{
+    margin: 2%;
+}
+
+ul,li{
+    font-size: 1.2rem;
+}
+
+/* heading section */
+#heading{
+    padding-bottom: 8.5%;
+    padding-right: 5%;
+}
+#Experience{
+    width: 100%;
+    height: 100%;
+    
+    padding: 0 8% 5%;
+    background-color:  rgba(235, 235, 235, 0.932);
+}
+.col-div{
+    padding: 20px;
+}
+#contact{
+    padding: 0 8%;
+    background-color: rgba(235, 235, 235, 0.932);
+}
+#Projects{
+    width: 100%;
+    height: 100%;
+}
+.Experience-img{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-right: 40px;
+
+}
+.ex-row{
+    margin:20px;
+
+}
+.card{
+    margin: 5%;
+}
+.card:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.icon-img{
+    padding: 10px;
+}
+.icon-div{
+    text-align: center;
+}
+.footer-div{
+    margin: 5%;
+}
+.footer-div-icon{
+    margin: 5%;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><%= ans.navbrandname %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><span>Home</span> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Experience"><span>Experience</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Projects"><span>Project</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact"><span>Social</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><span>Resume</span></a>
+              </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+    <section id="heading">
+        <div class="container-fluid">
+
+          <div class="profile">
+          <div class="row">
+              <div class="col-lg-4 profile-col">
+                <img src="<%= ans.image %>" class="profile-picture" alt="" srcset="">
+                <h2><%= ans.yourname %></h2>
+                <p>
+                    Graduate Student at <%= ans.collegename %>,<br> Bachelor of Technology in <%= ans.graductionstream %>
+                </p>
+                <a href="<%= ans.gmail %>" ><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+              </div>
+              <div class="col-lg-8">
+                <h1>
+                    Biography
+                  </h1>
+                  <p>
+                      <%= ans.bio %>
+                  </p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Interests</h3>
+                        <ul>
+                          <% if(ans.listitem1 !== ''){ %>
+                            <li> <%= ans.listitem1 %> </li>
+
+                          <%}%>
+                          <% if(ans.listitem2 !== ''){ %>
+                            <li> <%= ans.listitem2 %> </li>
+
+                          <%}%>
+                  
+                          <% if(ans.listitem3 !== ''){ %>
+                            <li> <%= ans.listitem3 %> </li>
+
+                          <%}%>
+                  
+
+                        
+
+
+                
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Education</h3>
+                        <ul>
+                            
+                            <li><%= ans.course1 %>
+                                <ul>
+                                    <li><%= ans.Streamtype1 %></li>
+                                    <li>CGPA/Percentage: <%= ans.CGPA1 %></li>
+                                </ul>
+                            </li>
+                            
+                            <li><%= ans.course2 %> </li>
+                            <ul>
+                                <li>
+                                    <%= ans.Streamtype2 %>
+
+                                </li>
+                                <li>
+                                  <li>CGPA/Percentage: <%= ans.CGPA2 %></li>
+                                </li>
+                            </ul>
+
+                        </ul>
+
+                    </div>
+                </div>
+              </div>
+    
+            
+          </div>
+          </div>
+</div>
+    </section>
+    
+
+    <section id="Experience">
+        <h1 style="text-align: center;">
+            Experience
+        </h1>
+        <div class="container">
+            <div class="ex-row row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                         <h3><%= ans.Experience1title %> </h3>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"><%= ans.Experience1dis %></h5>
+                          <h6><%= ans.Experience1duration %> </h6>
+                          <ul>
+                              <li>
+                                  Postion of Responsibility
+                                  <ul>
+                                    <% if(ans.Experience1postion1!==""){ %>
+                                      <li><%= ans.Experience1postion1 %></li>
+
+                                    <%}%>
+                                    <% if(ans.Experience1postion2!==""){ %>
+                                      <li><%= ans.Experience1postion2 %></li>
+
+                                    <%}%>
+                                    <% if(ans.Experience1postion3!==""){ %>
+                                      <li><%= ans.Experience1postion3 %></li>
+
+                                    <%}%>
+                                  </ul>
+
+                                  
+                              </li>
+                          </ul>
+                          
+                        </div>
+                      </div>
+                      
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                          <h3><%= ans.Experience2title %></h3>
+                        </div>
+                        
+                        <div class="card-body">
+                          <h5 class="card-title"><%= ans.Experience2dis %> </h5>
+                          <h6><%= ans.Experience2duration %></h6>
+                          <ul>
+                            <li>
+                                Postion of Responsibility
+                                <ul>
+                                  <% if(ans.Experience2postion1 !==""){ %>
+                                    <li><%= ans.Experience2postion1 %></li>
+
+                                  <%}%>
+                                  <% if(ans.Experience2postion2 !==""){ %>
+                                    <li><%= ans.Experience2postion2 %></li>
+
+                                  <%}%>
+                                  <% if(ans.Experience2postion3 !==""){ %>
+                                    <li><%= ans.Experience2postion3 %></li>
+
+                                  <%}%>
+                                   
+                                </ul>
+
+                                
+                            </li>
+                        </ul>
+                          
+                        </div>
+                      </div>
+                     
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                          <h3>
+                            <%= ans.Experience3title %>
+                          </h3>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"><%= ans.Experience3dis %></h5>
+                          <h6><%= ans.Experience3duration %></h6>
+                          <ul>
+                            <li>
+                                Postion of Responsibility
+                                <ul>
+                                  <% if(ans.Experience3postion1){ %>
+                                    <li><%= ans.Experience3postion1 %></li>
+
+                                  <%}%>
+                                  <% if(ans.Experience3postion2){ %>
+                                    <li><%= ans.Experience3postion2 %></li>
+
+                                  <%}%>
+                                  <% if(ans.Experience3postion3){ %>
+                                    <li><%= ans.Experience3postion3 %></li>
+
+                                  <%}%>
+                                    
+                                </ul>
+
+                                
+                            </li>
+                        </ul>
+                          
+                        </div>
+                      </div>
+                    
+
+                </div>
+            </div>
+           
+        </div>
+
+
+    </section>
+   
+    <section id="Projects">
+        <h1 style="text-align: center;">
+            Projects
+        </h1>
+        <div class="container">
+            <div class="ex-row row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                         <h3><%= ans.Project1title %> </h3>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-text"><%= ans.Project1dis %></h5>
+                          <h6><%= ans.Project1duration %></h6>
+                          <ul>
+                              <li>
+                                Technology Stack
+                                  <ul>
+                                    <% if(ans.Project1postion1){ %>
+                                      <li><%= ans.Project1postion1 %></li>
+                                    <%}%>
+                                    <% if(ans.Project1postion2){ %>
+                                      <li><%= ans.Project1postion2 %></li>
+                                    <%}%>
+                                    <% if(ans.Project1postion3){ %>
+                                      <li><%= ans.Project1postion3 %></li>
+                                    <%}%>
+                                    <% if(ans.Project1postion4){ %>
+                                      <li><%= ans.Project1postion4 %></li>
+                                    <%}%>
+                                    <% if(ans.Project1postion5){ %>
+                                      <li><%= ans.Project1postion5 %></li>
+                                    <%}%>
+                                    <% if(ans.Project1postion6){ %>
+                                      <li><%= ans.Project1postion6 %></li>
+                                    <%}%>
+                                  </ul>
+
+                                  
+                              </li>
+                          </ul>
+                          
+                        </div>
+                      </div>
+                      
+
+                </div>
+                <div class="col-lg-6">
+                  <div class="card">
+                      <div class="card-header">
+                       <h3><%= ans.Project2title %> </h3>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-text"><%= ans.Project2dis %></h5>
+                        <h6><%= ans.Project2duration %></h6>
+                        <ul>
+                            <li>
+                              Technology Stack
+                                <ul>
+                                  <% if(ans.Project2postion1){ %>
+                                    <li><%= ans.Project2postion1 %></li>
+                                  <%}%>
+                                  <% if(ans.Project2postion2){ %>
+                                    <li><%= ans.Project2postion2 %></li>
+                                  <%}%>
+                                  <% if(ans.Project2postion3){ %>
+                                    <li><%= ans.Project2postion3 %></li>
+                                  <%}%>
+                                  <% if(ans.Project2postion4){ %>
+                                    <li><%= ans.Project2postion4 %></li>
+                                  <%}%>
+                                  <% if(ans.Project2postion5){ %>
+                                    <li><%= ans.Project2postion5 %></li>
+                                  <%}%>
+                                  <% if(ans.Project2postion6){ %>
+                                    <li><%= ans.Project2postion6 %></li>
+                                  <%}%>
+                                </ul>
+
+                                
+                            </li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                    
+
+              </div>
+   
+ 
+            </div>
+           
+        </div>
+
+
+    </section>
+   
+    <section id="contact">
+        <h2>Contact </h2>
+        <h3 style="text-align: center;">Or just a friendly chat</h3>
+
+    <div class="container">
+        <footer class="site-footer">
+            
+            <div class="footer-div">
+                <p>
+                    <i class="footer-div-icon fas fa-map-marker-alt fa-3x"></i>
+                   <%= ans.address %>
+                </p>
+
+            </div>
+            <div class="footer-div">
+                <p>
+                    <i class="footer-div-icon fas fa-phone fa-3x"></i>
+                    <%= ans.phonenumber %>
+                </p>
+
+            </div>
+            
+            
+        <div class="icon-div">
+            <a href="https://github.com/pradhyumna6459"><i  class=" icon-img fab fa-github fa-2x"></i></a>
+            <a href="<%= ans.instagram %>"><i class="icon-img fab fa-instagram fa-2x"></i></a>
+            <a href="<%= ans.facebook %>"><i class="icon-img fab fa-facebook-square fa-2x"></i></a>
+            <a href="<%= ans.linkedin %>"><i  class="icon-img fab fa-linkedin fa-2x"></i></a>
+            <p >
+                copyright @PortfolioBuilder 2021
+            </p>
+
+        </div>
+      
+        
+
+
+
+          
+    </footer>
+    </div>
+    </section>
+    
+</body>
+</html>

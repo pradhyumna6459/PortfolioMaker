@@ -1,0 +1,99 @@
+/* nav */
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 10%;
+   
+    
+}
+
+.nav-item{
+    padding: 5px 10px;
+}
+.navbar-nav{
+    padding-right: 5%;
+}
+.navbar{
+    padding: 0;
+}
+/*html tag */
+body, html {
+    height: 100%;
+  }
+h1{
+    font-size: 4.5rem;
+    line-height: 1;
+    color: white;
+}
+h2{
+    line-height: 1.5;
+    font-size: 2rem;
+    font-weight: bold;
+
+    
+}
+p{
+    font-weight: 1rem;
+}
+
+
+/* Heading css */
+
+#heading{
+    text-align: center;
+    background-color: f0f5f9;
+    background-image: url("https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg");
+    height: 100%;
+    padding:10%;
+    
+}
+.heading-class{
+    padding: 5%;
+
+}
+/* about -us */
+#about-us{
+    padding: 10%;
+}
+.about-us-p{
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* testimonials*/
+#testimonials{
+    padding: 10%;
+
+}
+.testi{
+    background-image: url("https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg");
+    
+    color: white;
+    text-align: center;
+    padding: 10%;
+
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+
+.testo-img{
+    width: 25%;
+    border-radius: 100%;
+}
+
+/* Social */
+#social{
+    padding: 10%;
+}
+
+/* footer */
+footer{
+    text-align: center;
+}
+.icon-img{
+    padding: 1%;
+}

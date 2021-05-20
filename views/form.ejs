@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Maker</title>
+    <link rel="stylesheet" href="css/formstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    hr{
+    border: 1px dotted gray;
+    
+}
+body{
+    background-image: url("https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg");
+    padding: 3%;
+
+}
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+#form-section{
+    color: azure;
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Portfolio-Maker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home"><span>Home</span> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile"><span>Profile</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/form/<%= user.id %>"><span>Create Website</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contactus"><span>Social</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout"><span>Logout</span></a>
+              </li>
+              
+
+            
+          </ul>
+        </div>
+      </nav>
+    <div style="padding: 2%;"><section id="form-section">
+        <h1>Hello Hola नमस्ते!  </h1>
+    <section class="mb-4">
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Good to go</h2>
+      
+    
+        <div class="row">
+
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form  action="/form/<%= user.id %>" method="post"  >
+                    <h4>Heading of Your website</h4>
+
+                    <div class="row">
+    
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="headingname" class="form-control" autocomplete="off">
+                                <label for="headingname" class="">Web Page name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text"  name="navbrandname" class="form-control" autocomplete="off">
+                                <label for="navbrandname" class="">navbrandname</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" name="yourname" class="form-control" autocomplete="off">
+                                <label for="yourname" class="">Your name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text"  name="collegename" class="form-control" autocomplete="off">
+                                <label for="collegename" class="">College name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text"  name="graductionstream" class="form-control" autocomplete="off">
+                                <label for="graductionstream" class="">Your Branch</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                    
+                            <button class="btn btn-primary upload-btn" type="button">Choose Profile image</button>
+                            <input type="file" class="form-control" name="image" id="upload-input" style="display: none;">
+        
+                          </div>
+                       
+    
+                    </div>
+                    <hr>
+                    <h4>Biography Section</h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <textarea type="text" id="bio" name="bio" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="bio" class="">Your bio</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <h4>
+                                Interests
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="listitem1" class="form-control" autocomplete="off">
+                                        <label for="listitem1" class="">listitem1</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="listitem2" class="form-control" autocomplete="off">
+                                        <label for="listitem2" class="">listitem2</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="listitem3" class="form-control" autocomplete="off">
+                                        <label for="listitem3" class="">listitem3</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                       
+                            
+                           
+                            
+
+                        </div>
+                        <div class="col-lg-12">
+                            <h4>Education</h4>
+                            <h5>Education1</h5>
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="course1" class="form-control" autocomplete="off">
+                                        <label for="course1" class="">Course</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Streamtype1" class="form-control" autocomplete="off">
+                                        <label for="Streamtype1" class="">Stream name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="CGPA1" class="form-control" autocomplete="off">
+                                        <label for="CGPA1" class="">CGPA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>Education2</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="course2" class="form-control" autocomplete="off">
+                                        <label for="course2" class="">Course</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Streamtype2" class="form-control" autocomplete="off">
+                                        <label for="Streamtype2" class="">Stream name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="CGPA2" class="form-control" autocomplete="off">
+                                        <label for="CGPA2" class="">CGPA</label>
+                                    </div>
+                                </div>
+                                
+                              
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <hr>
+                    <h4>Experience</h4>
+                    <h5>
+                        Experience-1
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience1title" class="form-control" autocomplete="off">
+                                <label for="Experience1title" class="">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience1dis" class="form-control" autocomplete="off">
+                                <label for="Experience1dis" class="">Discription</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience1duration" class="form-control" autocomplete="off">
+                                <label for="Experience1duration" class="">Duration</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <h5>Position of Responsibility</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience1postion1" class="form-control" autocomplete="off">
+                                        <label for="Experience1postion1" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience1postion2" class="form-control" autocomplete="off">
+                                        <label for="Experience1postion2" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience1postion3" class="form-control" autocomplete="off">
+                                        <label for="Experience1postion3" class=""></label>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <h5>
+                        Experience-2
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience2title" class="form-control" autocomplete="off">
+                                <label for="Experience2title" class="">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience2dis" class="form-control" autocomplete="off">
+                                <label for="Experience2dis" class="">Discription</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience2duration" class="form-control" autocomplete="off">
+                                <label for="Experience2duration" class="">Duration</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <h5>Position of Responsibility</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience2postion1" class="form-control" autocomplete="off">
+                                        <label for="Experience2postion1" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience2postion2" class="form-control" autocomplete="off">
+                                        <label for="Experience2postion2" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience2postion3" class="form-control" autocomplete="off">
+                                        <label for="Experience2postion3" class=""></label>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <h5>
+                        Experience-3
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience3title" class="form-control" autocomplete="off">
+                                <label for="Experience3title" class="">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience3dis" class="form-control" autocomplete="off">
+                                <label for="Experience3dis" class="">Discription</label>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Experience3duration" class="form-control" autocomplete="off">
+                                <label for="Experience3duration" class="">Duration</label>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <h5>Position of Responsibility</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience3postion1" class="form-control" autocomplete="off">
+                                        <label for="Experience3postion1" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience3postion2" class="form-control" autocomplete="off">
+                                        <label for="Experience3postion2" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Experience3postion3" class="form-control" autocomplete="off">
+                                        <label for="Experience3postion3" class=""></label>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <h4>Projects</h4>
+                    <h5>
+                        Project-1
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project1title" class="form-control" autocomplete="off">
+                                <label for="Project1title" class="">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project1dis" class="form-control" autocomplete="off">
+                                <label for="Project1dis" class="">Discription</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project1duration" class="form-control" autocomplete="off">
+                                <label for="Project1duration" class="">Duration</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <h5>Technology Stack</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion1" class="form-control" autocomplete="off">
+                                        <label for="Project1postion1" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion2" class="form-control" autocomplete="off">
+                                        <label for="Project1postion2" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion3" class="form-control" autocomplete="off">
+                                        <label for="Project1postion3" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion4" class="form-control" autocomplete="off">
+                                        <label for="Project1postion4" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion5" class="form-control" autocomplete="off">
+                                        <label for="Project1postion5" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project1postion6" class="form-control" autocomplete="off">
+                                        <label for="Project1postion6" class=""></label>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <h5>
+                        Project-2
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project2title" class="form-control" autocomplete="off">
+                                <label for="Project2title" class="">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project2dis" class="form-control" autocomplete="off">
+                                <label for="Project2dis" class="">Discription</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="Project2duration" class="form-control" autocomplete="off">
+                                <label for="Project2duration" class="">Duration</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <h5>Technology Stack</h5>
+                            <div class="row">
+                                
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion1" class="form-control" autocomplete="off">
+                                        <label for="Project2postion1" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion2" class="form-control" autocomplete="off">
+                                        <label for="Project2postion2" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion3" class="form-control" autocomplete="off">
+                                        <label for="Project2postion3" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion4" class="form-control" autocomplete="off">
+                                        <label for="Project2postion4" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion5" class="form-control" autocomplete="off">
+                                        <label for="Project2postion5" class=""></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="Project2postion6" class="form-control" autocomplete="off">
+                                        <label for="Project2postion6" class=""></label>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <hr>
+                    <h4>Contact Details</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <textarea type="text"  name="address" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="address" class="">Address</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" name="phonenumber" class="form-control" autocomplete="off">
+                                
+                                <label for="phonenumber" class="">Mobile</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form mb-0">
+                                <input type="text" name="instagram" class="form-control" autocomplete="off">
+                                
+                                <label for="instagram" class="">Instagram</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form mb-0">
+                                <input type="text" name="facebook" class="form-control" autocomplete="off">
+                                
+                                <label for="facebook" class="">Facebook</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form mb-0">
+                                <input type="text" name="linkedin" class="form-control" autocomplete="off">
+                                
+                                <label for="linkedin" class="">linkedin</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form mb-0">
+                                <input type="text" name="gmail" class="form-control" autocomplete="off">
+                                
+                                <label for="gmail" class="">Gmail</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+    
+                </form>
+            </div>
+            </div>
+            </section>
+            </section>
+        </div>
+
+    
+            
+<script>
+
+  
+    $(document).ready(function(){
+      $('.upload-btn').on('click',function(){
+        $('#upload-input').click();
+  
+      });
+        $('#upload-input').on('change',function(){
+          var uploadInput=$('#upload-input');
+          if(uploadInput.val()!='')
+          {
+            var formData=new FormData();
+            formData.append('image',uploadInput[0].files[0]);
+            $.ajax({
+              url:'/uploadImage',
+              type:'POST',
+              data:formData,
+              processData:false,
+              contentType:false,
+              success:function(){
+                uploadInput.val('');
+              }
+            })
+          }
+        })
+      });
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ 
+
+
+    
+</body>
+</html>

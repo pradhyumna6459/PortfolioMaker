@@ -1,0 +1,36 @@
+
+.login{
+    background-color: f0f5f9;
+    background-image: url("https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg");
+    height: 100%;
+    padding: 10%;
+    
+    
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 10%;
+   
+    
+}
+
+.nav-item{
+    padding: 5px 10px;
+}
+.navbar-nav{
+    padding-right: 5%;
+}
+.navbar{
+    padding: 0;
+}
+
+/* footer */
+footer{
+    text-align: center;
+}
+.icon-img{
+    padding: 1%;
+}

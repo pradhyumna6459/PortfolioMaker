@@ -1,0 +1,17 @@
+hr{
+    border: 1px dotted gray;
+    
+}
+body{
+    background-image: url("https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg");
+    padding: 3%;
+
+}
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+#form-section{
+    color: azure;
+}
