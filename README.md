@@ -12,4 +12,4 @@ To run this web app simple clone this repo and install some dependencies through
  <br>
  <strong>node index.js</strong>
 
- <a href="">Demo Link</a>
+ <a href="https://pradhyumna6459.github.io/sample-demo-portfolio-maker/">Demo Link</a>
